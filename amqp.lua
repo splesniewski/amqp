@@ -684,7 +684,7 @@ function amqp:queue_bind(opts)
    f.method = {
       queue = opts.queue or self.opts.queue,
       exchange = opts.exchange or self.opts.exchange,
-      routing_key = opts.routing_key or "",
+      routing_key = opts.routing_key or self.opts.routing_key or "",
       no_wait = self.opts.no_wait or false
    }
 
